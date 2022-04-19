@@ -7,5 +7,5 @@ I have worked in mutliple projects in migration of applications to kubernetes an
 
 
 - 🔭 I’m currently working on migration of application from on-prem to cloud.
-- 🌱 I’m currently learning a lot about Azure cloud platform and getting certified as CKA.
+- 🌱 I’m currently learning about Azure cloud platform and getting certified as CKA.
 - 🤔 I’m looking for help with Data sciences and Data engineering stuff.
