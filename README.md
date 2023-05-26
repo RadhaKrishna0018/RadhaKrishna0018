@@ -5,7 +5,7 @@ Devops engineer
 --------------- 
 I have worked in mutliple projects in migration of applications to kubernetes, deploy and manage multi-node clusters using ansible, terraform. 
 * 🌍  I'm based in Toronto 
-* ✉️  You can contact me at [radhakrishna.ch0018@gmail.com](mailto:radhakrishna.ch0018@gmail.com) 
+* ✉️  You can contact me at [chradha0011@gmail.com]
 * 🧠  docker,kubernetes,helm,ansible,terraform,github actions,github pages,AWS,GCP.
 * 🧠  mongodb,postgresql,ELK stack,grafana,loki,keycloak.
 
