@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050d1f" />
+      <stop offset="100%" stop-color="#10213f" />
+    </linearGradient>
+    <linearGradient id="loop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5df2ff" />
+      <stop offset="50%" stop-color="#cba3ff" />
+      <stop offset="100%" stop-color="#ff74d9" />
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#9dffff" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#4a9cff" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#08142a" stop-opacity="1" />
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="360" height="360" rx="32" fill="url(#bg)" />
+  <g transform="translate(180 180)" filter="url(#glow)">
+    <circle r="110" fill="url(#core)" opacity="0.85" />
+  </g>
+  <g transform="translate(180 180)" stroke="url(#loop)" stroke-width="14" fill="none" stroke-linecap="round">
+    <path d="M0,-120 C80,-80 80,80 0,120 C-80,80 -80,-80 0,-120 Z" opacity="0.6" stroke-dasharray="360 200">
+      <animate attributeName="stroke-dashoffset" from="0" to="-560" dur="14s" repeatCount="indefinite" />
+    </path>
+    <path d="M-120,0 C-60,-110 60,-110 120,0 C60,110 -60,110 -120,0 Z" opacity="0.4" stroke-dasharray="280 120">
+      <animate attributeName="stroke-dashoffset" from="0" to="420" dur="18s" repeatCount="indefinite" />
+    </path>
+  </g>
+  <g transform="translate(180 180)" fill="#e9fbff">
+    <circle cx="84" cy="-32" r="7">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="-96" cy="18" r="6">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="10s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="32" cy="96" r="5">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  <g stroke="rgba(136,216,255,0.45)" stroke-width="2" stroke-dasharray="4 6" fill="none">
+    <path d="M100 160 Q180 120 260 160" />
+    <path d="M80 200 Q180 260 280 200" />
+  </g>
+</svg>
