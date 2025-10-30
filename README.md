@@ -61,9 +61,11 @@
 
 ## 📊 GitHub Snapshot
 
-| | |
-| --- | --- |
-| ![Radha's GitHub stats](https://github-readme-stats.vercel.app/api?username=radhakrishna0018&show_icons=true&theme=tokyonight) | ![Radha's GitHub streak](https://github-readme-streak-stats.herokuapp.com/?user=radhakrishna0018&theme=tokyonight) |
+| Public Pulse | Streak Heat | Private Fusion |
+| --- | --- | --- |
+| ![Public repo stats](https://github-readme-stats.vercel.app/api?username=radhakrishna0018&show_icons=true&theme=tokyonight&hide_rank=true) | ![Contribution streak](https://github-readme-streak-stats.herokuapp.com/?user=radhakrishna0018&theme=tokyonight) | ![Private commits enabled stats](https://github-readme-stats.vercel.app/api?username=radhakrishna0018&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide=stars&rank_icon=github) |
+
+_Deploy a personal instance of `github-readme-stats` with a PAT that has `repo` scope to fully hydrate the private commit metrics above._
 
 > “Infrastructure as code is my canvas; uptime is the art.”
 
