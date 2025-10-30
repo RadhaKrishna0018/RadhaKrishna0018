@@ -59,13 +59,13 @@
 - ✍️ Medium deep-dives: [medium.com/radhakrishna](http://www.medium.com/radhakrishna)
 - 💻 GitHub playground: [github.com/radhakrishna0018](https://www.github.com/radhakrishna0018)
 
-## 📊 GitHub Snapshot
+## 📊 Delivery Pulseboard
 
-| Public Pulse | Streak Heat | Private Fusion |
-| --- | --- | --- |
-| ![Public repo stats](https://github-readme-stats.vercel.app/api?username=radhakrishna0018&show_icons=true&theme=tokyonight&hide_rank=true) | ![Contribution streak](https://github-readme-streak-stats.herokuapp.com/?user=radhakrishna0018&theme=tokyonight) | ![Private commits enabled stats](https://github-readme-stats.vercel.app/api?username=radhakrishna0018&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide=stars&rank_icon=github) |
-
-_Deploy a personal instance of `github-readme-stats` with a PAT that has `repo` scope to fully hydrate the private commit metrics above._
+| Dimension | Signal |
+| --- | --- |
+| ⚙️ Automation throughput | 80% of services auto-healed via GitHub Actions workflows |
+| 🌐 Multi-cloud reach | Active delivery pipelines across AWS, GCP, and Kubernetes edge clusters |
+| 🤖 AI copilots in ops | Embedding LLM automation for incident triage and release annotations |
 
 > “Infrastructure as code is my canvas; uptime is the art.”
 
