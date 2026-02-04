@@ -32,6 +32,19 @@
 - 🛡️ Baking compliance checks into CI/CD using policy-as-code.
 - 🔭 Tracking golden signals through Grafana dashboards and Loki log pipelines.
 
+## 📚 Debugging Documentation Hub
+
+[![Debugging Tools](https://img.shields.io/badge/Docs-Debugging%20Tools-blue?style=for-the-badge&logo=github)](https://radhakrishna0018.github.io/debugging-tools/)
+
+A comprehensive collection of production-ready debugging guides and troubleshooting commands for:
+
+- **⚡ Elasticsearch** - Cluster health, shard allocation, index management
+- **🐘 PostgreSQL** - Query performance, connection issues, replication
+- **🍃 MongoDB** - Replica sets, performance tuning, diagnostics
+- **☸️ Kubernetes** - Pod debugging, services, deployments, networking
+
+> Real-world commands and solutions built from hands-on production experience. [**Explore the docs →**](https://radhakrishna0018.github.io/debugging-tools/)
+
 ## 🎬 Motion Gallery
 
 | Neural Loop | Sky Pulse |
