@@ -1,6 +1,12 @@
-# 🎧 Radha's DevOps Playground
+<p align="center">
+  <img src="assets/rk-logo.svg" width="120" alt="RK">
+</p>
 
-![AI Synapse Halo](assets/devops-orbit.svg)
+<p align="center">
+  <sub><code>kubernetes</code> · <code>devops</code> · <code>platform engineering</code></sub>
+</p>
+
+---
 
 > Energizing cloud journeys with an AI-first operations pulse.
 
