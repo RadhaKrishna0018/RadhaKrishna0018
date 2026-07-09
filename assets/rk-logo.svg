@@ -1,29 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke-linecap="square">
-  <title>RK monogram with orbiting node</title>
-  <!-- static ring -->
-  <circle cx="32" cy="32" r="28" stroke="#7DE2FF" stroke-width="1" opacity=".28"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>RK monogram — orbiting node, periodic revolution</title>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="18%" r="95%">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#03040A"/>
+    </radialGradient>
+  </defs>
 
-  <!-- inclined orbit, slowly revolving -->
-  <ellipse cx="32" cy="32" rx="28" ry="11" stroke="#7DE2FF" stroke-width="1" opacity=".18" transform="rotate(-28 32 32)">
-    <animateTransform attributeName="transform" type="rotate"
-      from="-28 32 32" to="332 32 32" dur="24s" repeatCount="indefinite"/>
-  </ellipse>
+  <!-- backdrop: the mark is cyan-on-near-black, so it carries its own
+       background rather than depending on the host page being dark -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
 
-  <!-- RK monogram -->
-  <g stroke="#7DE2FF" stroke-width="2.6">
-    <path d="M20 44V20h9a7 7 0 0 1 0 14h-9"/>
-    <path d="M29 34l8 10"/>
-    <path d="M44 20v24"/>
-    <path d="M44 32l9-12"/>
-    <path d="M44 32l9 12"/>
-  </g>
+  <!-- whole mark: idles, then makes one full revolution, mirroring the
+       hover interaction on the site -->
+  <g transform="translate(32 32) scale(.84) translate(-32 -32)" stroke-linecap="square">
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        values="0 32 32; 0 32 32; 360 32 32"
+        keyTimes="0; 0.55; 1"
+        calcMode="spline" keySplines="0 0 1 1; .45 .05 .25 1"
+        dur="7s" repeatCount="indefinite"/>
 
-  <!-- node riding the ring -->
-  <g>
-    <animateTransform attributeName="transform" type="rotate"
-      from="0 32 32" to="360 32 32" dur="9s" repeatCount="indefinite"/>
-    <circle cx="60" cy="32" r="2.6" fill="#7DE2FF">
-      <animate attributeName="opacity" values="1;.45;1" dur="3s" repeatCount="indefinite"/>
-    </circle>
+      <!-- orbital ring -->
+      <circle cx="32" cy="32" r="28" stroke="#7DE2FF" stroke-width="1" opacity=".3"/>
+
+      <!-- inclined orbit -->
+      <ellipse cx="32" cy="32" rx="28" ry="11" stroke="#7DE2FF" stroke-width="1" opacity=".2"
+               transform="rotate(-28 32 32)"/>
+
+      <!-- RK monogram: shared vertical spine -->
+      <g stroke="#7DE2FF" stroke-width="2.6">
+        <path d="M20 44V20h9a7 7 0 0 1 0 14h-9"/>
+        <path d="M29 34l8 10"/>
+        <path d="M44 20v24"/>
+        <path d="M44 32l9-12"/>
+        <path d="M44 32l9 12"/>
+      </g>
+
+      <!-- node riding the ring -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate"
+          from="0 32 32" to="360 32 32" dur="9s" repeatCount="indefinite"/>
+        <circle cx="60" cy="32" r="2.6" fill="#7DE2FF">
+          <animate attributeName="opacity" values="1;.4;1" dur="3s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+    </g>
   </g>
 </svg>
