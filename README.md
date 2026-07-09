@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/rk-logo.svg" width="120" alt="RK">
+  <img src="assets/rk-logo.svg?v=2" width="120" alt="RK">
 </p>
 
 <p align="center">
