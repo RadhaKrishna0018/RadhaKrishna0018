@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <title>RK — monogram drawing itself, trajectory released</title>
+  <title>RK</title>
+  <!-- The one animation, everywhere: the mark idles, then makes a single
+       full 360° revolution — identical to the hover interaction on
+       radhakrishna0018.github.io/devops-tools (markSpin, .9s,
+       cubic-bezier(.45,.05,.25,1)), replayed on a timer since READMEs
+       cannot hover. Self-contained dark backdrop so it reads on white. -->
   <defs>
     <radialGradient id="bg" cx="50%" cy="18%" r="95%">
       <stop offset="0%" stop-color="#0B1220"/>
@@ -7,42 +12,29 @@
     </radialGradient>
   </defs>
 
-  <!-- self-contained backdrop: the mark is cyan-on-near-black and would
-       wash out on a white README without it -->
   <rect width="64" height="64" rx="14" fill="url(#bg)"/>
 
-  <g transform="translate(-1.6 0)">
-    <!-- letterforms draw themselves; pathLength=1 normalises every path so
-         one dash pattern works for all of them -->
-    <g stroke="#7DE2FF" stroke-width="5" stroke-linecap="butt"
-       stroke-dasharray="1 1" stroke-dashoffset="1">
-      <path pathLength="1" d="M13.5 50V14">
-        <animate attributeName="stroke-dashoffset" values="1;0;0;1" keyTimes="0;0.22;0.88;1"
-                 dur="6s" repeatCount="indefinite"/>
-      </path>
-      <path pathLength="1" d="M13.5 14h8.5a9 9 0 0 1 0 18h-8.5">
-        <animate attributeName="stroke-dashoffset" values="1;1;0;0;1" keyTimes="0;0.12;0.34;0.88;1"
-                 dur="6s" repeatCount="indefinite"/>
-      </path>
-      <path pathLength="1" d="M21 32l10.5 18">
-        <animate attributeName="stroke-dashoffset" values="1;1;0;0;1" keyTimes="0;0.26;0.42;0.88;1"
-                 dur="6s" repeatCount="indefinite"/>
-      </path>
-      <path pathLength="1" d="M38.5 50V14">
-        <animate attributeName="stroke-dashoffset" values="1;1;0;0;1" keyTimes="0;0.3;0.5;0.88;1"
-                 dur="6s" repeatCount="indefinite"/>
-      </path>
-      <path pathLength="1" d="M38.5 33.5L52 50">
-        <animate attributeName="stroke-dashoffset" values="1;1;0;0;1" keyTimes="0;0.42;0.58;0.88;1"
-                 dur="6s" repeatCount="indefinite"/>
-      </path>
-    </g>
+  <!-- spin wrapper: idle 5.1s, revolve 0.9s (same duration + easing as the site) -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+      values="0 32 32; 0 32 32; 360 32 32"
+      keyTimes="0; 0.85; 1"
+      calcMode="spline" keySplines="0 0 1 1; .45 .05 .25 1"
+      dur="6s" repeatCount="indefinite"/>
 
-    <!-- the trajectory releases last, from the vertex outward -->
-    <path d="M36.4 35.8 C 42.5 29.5, 48.5 22.5, 58 11.4 C 54 23, 47.5 30.5, 40.6 39.4 Z"
-          fill="#7DE2FF" opacity="0">
-      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.52;0.68;0.9;1"
-               dur="6s" repeatCount="indefinite"/>
-    </path>
+    <!-- the mark, optically centred exactly as in logo.svg -->
+    <g transform="translate(-1.6 0)">
+      <g stroke="#7DE2FF" stroke-width="5" stroke-linecap="butt">
+        <path d="M13.5 50V14"/>
+        <path d="M13.5 14h8.5a9 9 0 0 1 0 18h-8.5"/>
+        <path d="M21 32l10.5 18"/>
+        <path d="M38.5 50V14"/>
+        <path d="M38.5 33.5L52 50"/>
+      </g>
+      <path d="M36.4 35.8
+               C 42.5 29.5, 48.5 22.5, 58 11.4
+               C 54 23, 47.5 30.5, 40.6 39.4 Z"
+            fill="#7DE2FF"/>
+    </g>
   </g>
 </svg>
