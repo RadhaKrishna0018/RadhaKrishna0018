@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <title>RK monogram — orbiting node, periodic revolution</title>
+  <title>RK — monogram drawing itself, trajectory released</title>
   <defs>
     <radialGradient id="bg" cx="50%" cy="18%" r="95%">
       <stop offset="0%" stop-color="#0B1220"/>
@@ -7,44 +7,42 @@
     </radialGradient>
   </defs>
 
-  <!-- backdrop: the mark is cyan-on-near-black, so it carries its own
-       background rather than depending on the host page being dark -->
+  <!-- self-contained backdrop: the mark is cyan-on-near-black and would
+       wash out on a white README without it -->
   <rect width="64" height="64" rx="14" fill="url(#bg)"/>
 
-  <!-- whole mark: idles, then makes one full revolution, mirroring the
-       hover interaction on the site -->
-  <g transform="translate(32 32) scale(.84) translate(-32 -32)" stroke-linecap="square">
-    <g>
-      <animateTransform attributeName="transform" type="rotate"
-        values="0 32 32; 0 32 32; 360 32 32"
-        keyTimes="0; 0.55; 1"
-        calcMode="spline" keySplines="0 0 1 1; .45 .05 .25 1"
-        dur="7s" repeatCount="indefinite"/>
-
-      <!-- orbital ring -->
-      <circle cx="32" cy="32" r="28" stroke="#7DE2FF" stroke-width="1" opacity=".3"/>
-
-      <!-- inclined orbit -->
-      <ellipse cx="32" cy="32" rx="28" ry="11" stroke="#7DE2FF" stroke-width="1" opacity=".2"
-               transform="rotate(-28 32 32)"/>
-
-      <!-- RK monogram: shared vertical spine -->
-      <g stroke="#7DE2FF" stroke-width="2.6">
-        <path d="M20 44V20h9a7 7 0 0 1 0 14h-9"/>
-        <path d="M29 34l8 10"/>
-        <path d="M44 20v24"/>
-        <path d="M44 32l9-12"/>
-        <path d="M44 32l9 12"/>
-      </g>
-
-      <!-- node riding the ring -->
-      <g>
-        <animateTransform attributeName="transform" type="rotate"
-          from="0 32 32" to="360 32 32" dur="9s" repeatCount="indefinite"/>
-        <circle cx="60" cy="32" r="2.6" fill="#7DE2FF">
-          <animate attributeName="opacity" values="1;.4;1" dur="3s" repeatCount="indefinite"/>
-        </circle>
-      </g>
+  <g transform="translate(-1.6 0)">
+    <!-- letterforms draw themselves; pathLength=1 normalises every path so
+         one dash pattern works for all of them -->
+    <g stroke="#7DE2FF" stroke-width="5" stroke-linecap="butt"
+       stroke-dasharray="1 1" stroke-dashoffset="1">
+      <path pathLength="1" d="M13.5 50V14">
+        <animate attributeName="stroke-dashoffset" values="1;0;0;1" keyTimes="0;0.22;0.88;1"
+                 dur="6s" repeatCount="indefinite"/>
+      </path>
+      <path pathLength="1" d="M13.5 14h8.5a9 9 0 0 1 0 18h-8.5">
+        <animate attributeName="stroke-dashoffset" values="1;1;0;0;1" keyTimes="0;0.12;0.34;0.88;1"
+                 dur="6s" repeatCount="indefinite"/>
+      </path>
+      <path pathLength="1" d="M21 32l10.5 18">
+        <animate attributeName="stroke-dashoffset" values="1;1;0;0;1" keyTimes="0;0.26;0.42;0.88;1"
+                 dur="6s" repeatCount="indefinite"/>
+      </path>
+      <path pathLength="1" d="M38.5 50V14">
+        <animate attributeName="stroke-dashoffset" values="1;1;0;0;1" keyTimes="0;0.3;0.5;0.88;1"
+                 dur="6s" repeatCount="indefinite"/>
+      </path>
+      <path pathLength="1" d="M38.5 33.5L52 50">
+        <animate attributeName="stroke-dashoffset" values="1;1;0;0;1" keyTimes="0;0.42;0.58;0.88;1"
+                 dur="6s" repeatCount="indefinite"/>
+      </path>
     </g>
+
+    <!-- the trajectory releases last, from the vertex outward -->
+    <path d="M36.4 35.8 C 42.5 29.5, 48.5 22.5, 58 11.4 C 54 23, 47.5 30.5, 40.6 39.4 Z"
+          fill="#7DE2FF" opacity="0">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.52;0.68;0.9;1"
+               dur="6s" repeatCount="indefinite"/>
+    </path>
   </g>
 </svg>
